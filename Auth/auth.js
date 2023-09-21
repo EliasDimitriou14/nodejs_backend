@@ -21,7 +21,7 @@ exports.registerUser = async (req, res, next) => {
 
     // Check if the password length is at least 6 characters. If not ---> Bad Request
     if(password.length < 6) {
-        return res.status(400).json({ message: "Password less tha 6 characters" })
+        return res.status(400).json({ message: "Password less than 6 characters" })
     }
 
     //  Hash the provided password using bcrypt and then create a new user in the database with the hashed password.

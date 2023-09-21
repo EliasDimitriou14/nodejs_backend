@@ -27,7 +27,7 @@ exports.adminAuth = (req, res, next) => {
         })
     } else {
       // If the token is not present, return a 401 Unauthorized response with a message indicating that the user is not authorized because the token is not available.
-        return res.status(401).json({ message: "Not authorized, token available" })
+        return res.status(401).json({ message: "Not authorized, token not available" })
     }
 }
 
